@@ -19,14 +19,17 @@ export const generatePDF = (invoice: InvoiceData) => {
   doc.setFontSize(24);
   doc.text("INVOICE", 20, y);
   doc.setFontSize(12);
-  doc.text(`#${invoice.invoiceNumber}`, 150, y);
-  y += 20;
-
   doc.text(
     `Date: ${new Date(invoice.date).toLocaleDateString("ja-JP")}`,
     150,
     y
   );
+  y += 10;
+  doc.text(`#${invoice.invoiceNumber}`, 20, y);
+  y += 15;
+
+  doc.setFontSize(10);
+  doc.text(`Site Address :  ${invoice.siteAddress}`, 20, y);
   y += 20;
 
   doc.setFontSize(14);

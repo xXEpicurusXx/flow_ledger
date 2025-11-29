@@ -18,4 +18,5 @@ export interface InvoiceData {
   subtotal: number
   taxAmount: number
   total: number
+  siteAddress:string
 }

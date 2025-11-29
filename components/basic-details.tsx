@@ -21,6 +21,7 @@ export default function BasicDetails() {
             id="invoiceNumber"
           />
         </div>
+        
         <div>
           <Label htmlFor="date">Date</Label>
           <Input
@@ -30,6 +31,15 @@ export default function BasicDetails() {
             value={invoice.date}
           />
         </div>
+        <div>
+            <Label htmlFor="siteAddress">Site Address</Label>
+            <Input
+              id="siteAddress"
+              value={invoice.siteAddress}
+              onChange={(e) => updateInvoice({ siteAddress: e.target.value })}
+              placeholder="Site Address"
+            />
+          </div>
       </CardContent>
     </Card>
   );

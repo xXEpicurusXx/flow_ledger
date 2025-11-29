@@ -50,7 +50,7 @@ export default function InvoicePreview({ onBack }: InvoicePreviewProps) {
         )}
 
         <Card>
-          <CardContent className="p-8">
+          <CardContent className="p-6">
             <div className="relative w-full h-22">
               {/* Logo on the left */}
               <div className="absolute left-0 top-0 w-100 h-22">
@@ -64,7 +64,7 @@ export default function InvoicePreview({ onBack }: InvoicePreviewProps) {
               </div>
 
               {/* Date on the right */}
-              <p className="absolute right-0 top-0 text-sm text-gray-600">
+              <p className="absolute right-0 top-6 text-sm text-gray-600">
                 Date: {formatDate(invoice.date)}
               </p>
             </div>
@@ -73,6 +73,11 @@ export default function InvoicePreview({ onBack }: InvoicePreviewProps) {
             <div className="mb-8">
               <h2 className="text-3xl font-bold mb-2">INVOICE</h2>
               <p className="text-gray-600">#{invoice.invoiceNumber}</p>
+            </div>
+
+            <div className="mb-8">
+                <h3 className="font-semibold mb-2">Site Address:</h3>
+              <p className="text-gray-600">{invoice.siteAddress}</p>
             </div>
 
             {/* From / To */}
